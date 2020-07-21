@@ -5,7 +5,7 @@ function [Kte,Me,Be,Qe,Ce,MeM,KteM,BeM,QeM] = Elementroutine_n_linear(A,E,rho,le
 % Elementroutine: compute Kte, Me
 
 %%
-% define empty Kte
+% define empty Matrix
 Kteux=zeros(12);
 Ktev=zeros(12);
 Ktevx=zeros(12); 
@@ -15,7 +15,7 @@ Ktewx=zeros(12);
 Ktewxx=zeros(12);
 Ktephi=zeros(12);
 Ktephix=zeros(12);
-% define empty Me
+
 Me=zeros(12);
 
 Be=zeros(12);
@@ -23,15 +23,8 @@ Qe=zeros(12,1);
 
 
 %%
-% xiVec=[-sqrt(1/3),sqrt(1/3)];   % define sampling points for Gauss-quadrature      
-% wVec =[1,1];   % weights for sampling points of Gauss-quadrature 
-
-%
-% xiVec=[-sqrt(3/5),0,sqrt(3/5)];  % define sampling points for Gauss-quadrature
-% wVec=[5/9,8/9,5/9];             % weights for sampling points of Gauss-quadrature
-
-xiVec=[-sqrt(3/7+2/7*sqrt(6/5)),-sqrt(3/7-2/7*sqrt(6/5)),sqrt(3/7-2/7*sqrt(6/5)),sqrt(3/7+2/7*sqrt(6/5))];
-wVec=[(18-sqrt(30))/36,(18+sqrt(30))/36,(18+sqrt(30))/36,(18-sqrt(30))/36];
+xiVec=[-sqrt(3/7+2/7*sqrt(6/5)),-sqrt(3/7-2/7*sqrt(6/5)),sqrt(3/7-2/7*sqrt(6/5)),sqrt(3/7+2/7*sqrt(6/5))]; % define sampling points for Gauss-quadrature  
+wVec=[(18-sqrt(30))/36,(18+sqrt(30))/36,(18+sqrt(30))/36,(18-sqrt(30))/36];    % weights for sampling points of Gauss-quadrature 
 %%
 
 for i=1:length(xiVec)
@@ -101,7 +94,7 @@ for i=1:length(xiVec)
     Ktewxx=Ktewxx+w*E*I*(Nwxx'*Nwxx);
     Ktephi=Ktephi+w*rho*I*2*(-Nphix'*Nphix)*Omega^2;
     Ktephix=Ktephix+w*(G*It*Nphix)'*Nphix;
-    
+%     
     % matrices Rico
     % nonlinear
     

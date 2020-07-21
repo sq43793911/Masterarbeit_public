@@ -7,13 +7,14 @@ close all
 E=2.1e11;         % N/m^2
 D0=0.01;           % Durchmesser m
 R=D0/2;
-d=0.002;          % Wandstaeker m
+d=0.0005;          % Wandstaeker m
 r=R-d;
 A=pi*(R^2-r^2);   % Flaeche m^2
-l=0.34;           % m
+l=0.33;           % m
 rho=7800;         % Dichte in [kg/m^3]
+V0=A*l*rho;       % Volume [m^3]
 mu=rho*A;         % Massenbelegung in [kg/m]
-Nel=100;           % number of elements in bend
+Nel=20;           % number of elements in bend
 Nno=Nel+1;        % number of nodes in bend in linear_ansatz
 % Nno=Nel*2+1;        % number of nodes in qudra-ansatz
 le=l/Nel;         % length of an element
@@ -22,13 +23,13 @@ It=2*I;     % Torsionstraegheitsmoment
 v=0.28;                % Poissonzahl
 G=E/(2*(1+v));        % Schubmodul
 c=0;                  % Feder-Steifigkeit [N/m]
-m=0.0145;                % Masse  [kg]
+m=0.0303;                % Masse  [kg]  10x8:0.01896;  10x9:0.02104
 
-Omega=60;    % Drehgeschwindigkeit [r/s]
-e=-0.002;      % Exzentrizitaet      [m]
+Omega=40;    % Drehgeschwindigkeit [rad/s]
+e=-0;      % Exzentrizitaet      [m]
 q=6;          % Freiheitsgrad
 
-Fx=0;                      % force [N]
+Fx=50;                      % force [N]
 Fy=0;                      % force [N]
 Fz=0;                      % force [N]
 M=0;                       % moment [N*m]
@@ -39,15 +40,13 @@ FVec(end-4)=Fy;
 FVec(end-2)=Fz;
 FVec(end)=M;
 
-
 uMat=[];
 vMat=[];
 vxMat=[];
 wMat=[];
 wxMat=[];
 
-
-%% define empty matrice in u(x)
+%% define empty matrice
 Kt=zeros(Nno*q);  % empty global stiffnes-matrix 
 M=zeros(Nno*q);   % empty global mass-matrix 
 B=zeros(Nno*q);   
@@ -68,11 +67,12 @@ wx=zeros(Nno,1);
 vx=zeros(Nno,1);
 phi=zeros(Nno,1);
 
-Nloop=10;
+Nloop=5;
 Ux=0;
 Vx=0;
 Wx=0;
 
+%% main program
 for j=1:Nloop
     
    if j==1
@@ -97,10 +97,10 @@ for j=1:Nloop
        
        for k=1:Nel                                     % loop over every element
            
-%                       Ux=Fx/E/A;
-%                       Vx=(vx(k+1)+vx(k))/2;
-%                       Wx=(wx(k+1)+wx(k))/2;
-           
+%                                  Ux=Fx/E/A;
+%                                  Vx=(vx(k+1)+vx(k))/2;
+%                                  Wx=(wx(k+1)+wx(k))/2;
+%            
            Ux=(u(k+1)-u(k))/le;
            Wx=(w(k+1)-w(k))/le;
            Vx=(v(k+1)-v(k))/le;
@@ -128,7 +128,6 @@ for j=1:Nloop
        B(:,1) = [];
    end
    
-   
    QVec=diag(Q);
    QVec(1:q)=[];
    
@@ -138,8 +137,6 @@ for j=1:Nloop
    for yy=1:q
        P=[0;P];
    end
-   
-   
    
    for xx=1:Nno
        n=(xx-1)*q+1;
@@ -151,7 +148,6 @@ for j=1:Nloop
        phi(xx)=P(n+5);
    end
        
-
    if j==Nloop
        
    else

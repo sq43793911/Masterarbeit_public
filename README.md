@@ -1,6 +1,6 @@
 # Masterarbeit an TU Freiberg
 
-Experimentelle und simulative Modalanalyse eines Werkzeugschaftes beim HSC-Fräsen unter Einfluss eines Exzentrizitätsfehlers.
+Experimentelle und simulative Modalanalyse eines Werkzeugschaftes beim HSC-Fräsen und Einfluss eines Exzentrizitätsfehlers.
 
 # Aufgabenstellung: 
 
