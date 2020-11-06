@@ -1,0 +1,73 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{GHSW17}
+
+\bibitem[D{\o}s89]{dossing1989strukturen}
+O~D{\o}ssing.
+\newblock Strukturen pr{\"u}fen teil 1: Mechanische beweglichkeits-messungen.
+\newblock {\em Br{\"u}el \& Kj{\ae}r}, 1989.
+
+\bibitem[GHSW04]{gross2004technische}
+Dietmar Gross, Werner Hauger, J{\"o}rg Schr{\"o}der, and Wolfgang~A Wall.
+\newblock {\em Technische Mechanik 3: Kinetik}.
+\newblock Springer, 2004.
+
+\bibitem[GHSW17]{gross2017technische}
+Dietmar Gross, Werner Hauger, J{\"o}rg Schr{\"o}der, and Wolfgang~A Wall.
+\newblock {\em Technische Mechanik 2: Elastostatik}.
+\newblock Springer-Verlag, 2017.
+
+\bibitem[HGP15]{heimann2015mechatronik}
+Bodo HEIMANN., Wilfried Gerth, and Karl Popp.
+\newblock {\em MECHATRONIK 4. A.}
+\newblock CARL HANSER Verlag GMBH \&, 2015.
+
+\bibitem[HH15]{huseynov2015entwicklung}
+Rafig Huseynov and Bertram Hentschel.
+\newblock {\em Entwicklung von Werkzeugsch{\"a}ften f{\"u}r einen Betrieb im
+  {\"u}berkritischen Drehzahlbereich}.
+\newblock Shaker, 2015.
+
+\bibitem[Kat10]{kattan2010matlab}
+Peter~I Kattan.
+\newblock {\em MATLAB guide to finite elements: an interactive approach}.
+\newblock Springer Science \& Business Media, 2010.
+
+\bibitem[Kok09]{Kokavecz2010}
+Judith Kokavecz.
+\newblock Modalanalyse.
+\newblock In Michael M{\"o}ser, editor, {\em Messtechnik der Akustik}, pages
+  499--535. Springer Berlin Heidelberg, 2009.
+
+\bibitem[LY{\etalchar{+}}84]{luenberger1984linear}
+David~G Luenberger, Yinyu Ye, et~al.
+\newblock {\em Linear and nonlinear programming}, volume~2.
+\newblock Springer, 1984.
+
+\bibitem[MS79]{matthies1979solution}
+Hermann Matthies and Gilbert Strang.
+\newblock The solution of nonlinear finite element equations.
+\newblock {\em International journal for numerical methods in engineering},
+  14(11):1613--1626, 1979.
+
+\bibitem[Rus11]{rust2011nichtlineare}
+Wilhelm Rust.
+\newblock {\em Nichtlineare finite-elemente-berechnungen}.
+\newblock Springer, 2011.
+
+\bibitem[Sch91]{schwarz2013methode}
+Hans-Rudolf Schwarz.
+\newblock {\em Methode der finiten Elemente: eine Einf{\"u}hrung unter
+  besonderer Ber{\"u}cksichtigung der Rechenpraxis}, volume~47.
+\newblock Teubner-Verlag, 1991.
+
+\bibitem[Ste15]{steinke2015finite}
+Peter Steinke.
+\newblock {\em Finite-Elemente-Methode: Rechnergest{\"u}tzte Einf{\"u}hrung}.
+\newblock Springer-Verlag, 2015.
+
+\bibitem[Wau14]{wauer2014kontinuumsschwingungen}
+J{\"o}rg Wauer.
+\newblock {\em Kontinuumsschwingungen}.
+\newblock Springer, 2014.
+
+\end{thebibliography}

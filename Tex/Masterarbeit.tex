@@ -1,0 +1,203 @@
+\documentclass[a4paper,11pt,twoside]{article}
+\usepackage{graphicx}
+\usepackage[lmargin=105pt,rmargin=70pt,top=95pt,bottom=110pt]{geometry}
+\usepackage{subfigure}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+%\usepackage{macroswap}
+%\geometry{left=3.5cm, rightscrartcl=3.5cm, top=3cm, bottom=3cm}
+%\usepackage{polyglossia}
+
+\usepackage{titling}
+\usepackage{titlesec}
+\usepackage{titletoc}
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+
+\titlecontents{paragraph}
+[0pt]
+{\addvspace{1pc} \bfseries  \sffamily \normalsize }
+{}
+{}
+{\titlerule*[1pc]{\quad\quad} \contentspage[A-1]}
+
+\titlecontents{subparagraph}
+[0pt]
+{\addvspace{1pc} \bfseries  \sffamily \normalsize }
+{}
+{}
+{\titlerule*[1pc]{\quad\quad} \contentspage[B-1]}
+
+\titlecontents{part}
+[0pt]
+{\addvspace{1pc} \bfseries  \sffamily \normalsize }
+{}
+{}
+{\titlerule*[1pc]{\quad\quad} \contentspage[C-1]}
+
+
+
+
+%\posttitle{\par\end{center}\vspace{100mm}}
+\setlength{\parindent}{0pt} %no indent
+
+% Matlab code setting
+\usepackage{listings}
+\lstset{language=Matlab}%code:matlab
+\lstset{breaklines}%auto break lines
+\lstset{extendedchars=false}%fix
+
+% set number
+\numberwithin{equation}{section} % eqution-number - with section
+\numberwithin{figure}{section}   % figure-number - with section
+\numberwithin{table}{section}    % table-number - with section
+\newcommand\specialsectioning{\setcounter{secnumdepth}{-2}}
+
+% Deutsche Umgebung %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{german} 
+\usepackage[english,ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Plot package %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{pgfplots}  %plot
+\usepackage{tikz}      %plot
+%\usepackage{subfig}
+\usepackage{float}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% font setting %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% for pdflatx %%%%%%%%%%%%%%%%%%
+%\usepackage{txfonts}
+%\usepackage{newtxtext}
+\usepackage{mathptmx}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+% for xelatx %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{fontspec} %fontpackage
+%\setmainfont{Times New Roman} %set font
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{pdfpages} % incloud pdf
+\usepackage{graphicx}
+%\usepackage[timestamp]{draftcopy}
+
+%\usepackage{blindtext}
+
+
+\usepackage{ulem} % underline
+\usepackage{multirow}
+\usepackage{diagbox} 
+\usepackage{makecell}
+
+\newcommand{\Matlab}{\textsc{Matlab}\textsuperscript{\textregistered} }
+\newcommand{\Ansys}{\textsc{Ansys}\textsuperscript{\textregistered} }
+\newcommand{\SolidWorks}{\textsc{SolidWorks}\textsuperscript{\textregistered} }
+\newcommand{\dx}{ \: \mathrm{d}\, x}
+\newcommand{\dt}{ \: \mathrm{d}\, t}
+\newcommand{\dxi}{ \: \mathrm{d}\, \xi}
+
+% Bibtex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage[babel=once,german=guillemets]{csquotes} % Anführungszeichen, insb. für biblatex
+%\usepackage[zitatstil=alph,backend=biber]{TUBAFbib}
+%\bibliography{tubafbib-beispiel}
+\usepackage{cite}
+\bibliographystyle{alpha}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Kopfzelle und Fusszelle %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{fancyhdr}
+\newcommand{\changefont}{%
+	\fontsize{10}{12}\selectfont
+}
+\pagestyle{fancy}
+%L--rechts R--links C--center O--ungrade Seite E--grade Seite
+\fancyhead[LO,RE]{\changefont \nouppercase\leftmark} 
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\fancyhead[RO,LE]{\thepage}%Kopfzelle - ungrade Seite links und grade Seite rechts - show pagenumber
+\fancyfoot[CO,CE]{}%Fusszelle - ungrade Seite center und grade Seite center - null
+\fancyfoot[RO,RE]{}%Fusszelle - ungrade Seite rechts und grade Seite rechts - null
+\fancyfoot[LO,LE]{\changefont Q.Sun, Experimentelle und simulative Modalanalyse eines Werkzeugschaftes beim HSC-Fräsen unter Einfluss eines Exzentrizitätsfehlers}%Fusszelle - ungrade Seite links und grade Seite links - autor, title
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\title{Experimentelle und simulative Modalanalyse eines Werkzeugschaftes beim HSC-Fräsen unter Einfluss eines Exzentrizitätsfehlers}
+\author{Qian Sun}
+
+\begin{document}
+	\pagenumbering{Roman}
+	
+	\include{Titlepage}
+	
+	\include{emptypage}
+	
+	\includepdf[offset=0.8cm 0cm,scale=0.9]{Ausschreibung_Schaukasten.pdf}
+	
+	\include{emptypage}
+	
+% Contents %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\pagestyle{fancy}
+	\tableofcontents
+	
+	
+%% empty page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\include{emptypage}
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\fancyhead[LO,RE]{\changefont \nouppercase\leftmark} % Kopfzelle ungrade Seite rechts und gerade Seite links - show section
+	
+	\pagenumbering{arabic}
+	\setcounter{page}{1} 
+	
+	\include{Einleitung/Einleitung}
+	
+%% empty page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\include{emptypage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\include{Theoretische_Grundlagen/Theoretische_Grundlagen}
+	
+%% empty page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\include{emptypage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\include{Berechnungsmodell/Berechnungsmodell}
+	
+%% empty page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\include{emptypage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\include{Experimentelle_Untersuchungen/Experimentelle_Untersuchungen}
+
+%% empty page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\include{emptypage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\include{Ergebnisse/Ergebnisse}
+
+%% empty page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\include{emptypage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+	
+	\include{Zusammenfassung/Zusammenfassung}
+	
+%% empty page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\include{emptypage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+	\include{Verzeichnis/Verzeichnis}
+
+
+
+	\include{Anhang/Anhang_A}
+	
+%% empty page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\include{emptypage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\include{Anhang/Anhang_B}
+\end{document}

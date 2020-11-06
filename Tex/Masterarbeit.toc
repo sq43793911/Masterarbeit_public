@@ -1,0 +1,33 @@
+\babel@toc {ngerman}{}
+\contentsline {section}{\numberline {1}Einleitung}{1}
+\contentsline {section}{\numberline {2}Theoretische Grundlagen}{3}
+\contentsline {subsection}{\numberline {2.1}Grundlagen der Finite-Elemente-Methode}{3}
+\contentsline {subsubsection}{\numberline {2.1.1}Nichtlineare Finite-Element-Berechnungen}{3}
+\contentsline {subsubsection}{\numberline {2.1.2}Geometrische Nichtlinearit\IeC {\"a}t}{4}
+\contentsline {subsection}{\numberline {2.2}L\IeC {\"o}sung nichtlinearer Gleichungssysteme}{5}
+\contentsline {subsection}{\numberline {2.3}Prinzip von Hamilton}{7}
+\contentsline {section}{\numberline {3}Berechnungsmodell}{9}
+\contentsline {subsection}{\numberline {3.1}Potentielle und kinetische Energie eines Balkens}{9}
+\contentsline {subsection}{\numberline {3.2}Das dreidimensionale zweiknotige Balkenelement }{10}
+\contentsline {subsection}{\numberline {3.3}Variationsformulierung}{11}
+\contentsline {subsection}{\numberline {3.4}Diskretisierung}{12}
+\contentsline {subsection}{\numberline {3.5}Zustandsraumdarstellung}{15}
+\contentsline {section}{\numberline {4}Experimentelle Untersuchungen}{17}
+\contentsline {subsection}{\numberline {4.1}Versuchsziel und -planung}{17}
+\contentsline {subsection}{\numberline {4.2}Versuchsaufbau}{18}
+\contentsline {subsubsection}{\numberline {4.2.1}Versuchsobjekt}{18}
+\contentsline {subsubsection}{\numberline {4.2.2}Aufbau des Versuchsstandes}{20}
+\contentsline {subsubsection}{\numberline {4.2.3}Messsoftware}{21}
+\contentsline {subsection}{\numberline {4.3}Experimentelle Modalanalyse}{23}
+\contentsline {section}{\numberline {5}Ergebnisse}{25}
+\contentsline {subsection}{\numberline {5.1}Probe Nr. 1 (Schaft 10$\times $8)}{25}
+\contentsline {subsection}{\numberline {5.2}Probe Nr. 2 (Schaft 10$\times $9)}{31}
+\contentsline {section}{\numberline {6}Zusammenfassung und Ausblick}{39}
+\contentsline {section}{\numberline {7}Verzeichnis}{41}
+\contentsline {subsection}{\numberline {7.1}Quellenverzeichnis}{41}
+\contentsline {subsection}{\numberline {7.2}Symbol- und Abk\IeC {\"u}rzungsverzeichnis}{42}
+\contentsline {subsection}{\numberline {7.3}Abbildungsverzeichnis}{44}
+\contentsline {subsection}{\numberline {7.4}Tabellenverzeichnis}{46}
+\contentsline {paragraph}{Anhang A: Programme}{1}
+\contentsline {subparagraph}{Anhang B: Zeichnungen der Bauteile}{1}
+\contentsfinish 
